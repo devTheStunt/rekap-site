@@ -7,7 +7,7 @@
     <meta name="color-scheme" content="dark">
     <title>REKAP — Sports recaps &amp; live shows. Creators earn tips and Live ticket revenue.</title>
     
-<meta name="rekap-build" content="9d8d5d30a8b2">
+<meta name="rekap-build" content="dd9adfcdf3e6">
 <link rel="icon" href="static/img/brand/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="static/img/brand/favicon-32.png" type="image/png" sizes="32x32">
 <link rel="apple-touch-icon" href="static/img/brand/apple-touch-icon.png" sizes="180x180">
@@ -33,6 +33,7 @@
 <meta name="description" content="Sports recaps &amp; live shows. Creators earn tips and Live ticket revenue.">
 
     <link rel="stylesheet" href="static/css/rekap-pages.css">
+    <link rel="preload" as="image" type="image/webp" fetchpriority="high" href="static/landing/hero-art-400.webp" imagesrcset="static/landing/hero-art-400.webp 400w, static/landing/hero-art-800.webp 800w" imagesizes="(min-width: 1000px) 460px, min(calc(100vw - 40px), 400px)">
 </head>
 <body class="pg-landing">
 
@@ -52,12 +53,31 @@
 <symbol id="i-play" viewBox="0 0 24 24"><path d="M5 5a2 2 0 0 1 3.008-1.728l11.997 6.998a2 2 0 0 1 .003 3.458l-12 7A2 2 0 0 1 5 19z"/></symbol>
 <symbol id="i-user-round" viewBox="0 0 24 24"><circle cx="12" cy="8" r="5"/> <path d="M20 21a8 8 0 0 0-16 0"/></symbol>
 <symbol id="i-heart" viewBox="0 0 24 24"><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"/></symbol>
+<symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 5h16"/> <path d="M4 12h16"/> <path d="M4 19h16"/></symbol>
 <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18"/> <path d="m6 6 12 12"/></symbol>
 </defs></svg>
 
-<header class="pg-top pg-top-center">
-    <a href="index.html" class="pg-top-logo" aria-label="REKAP home"><img src="static/img/brand/rekap-logo.svg" alt="REKAP" width="140" height="35"></a>
+<header class="pg-nav" id="top">
+    <a href="index.html" class="pg-nav-logo" aria-label="REKAP home"><img src="static/img/brand/rekap-logo.svg" alt="REKAP" width="112" height="28"></a>
+    <nav class="pg-nav-links" aria-label="Main">
+        <a href="#how-it-works">How it works</a>
+        <a href="#rekap-live">REKAP Live</a>
+    </nav>
+    <div class="pg-nav-auth">
+        
+        <a class="pg-nav-text" href="https://app.rekap.app/users/sign-in" data-cta="sign-in">Sign in</a>
+        <a class="pg-nav-pill" href="https://app.rekap.app/users/sign-in" data-cta="sign-up">Sign up</a>
+        
+        <a class="pg-nav-burger" href="#menu" aria-label="Open menu" aria-controls="menu"><svg class="pg-ic" aria-hidden="true"><use href="#i-menu"/></svg></a>
+    </div>
+    <div class="pg-menu" id="menu" aria-label="Menu">
+        <a href="#how-it-works">How it works</a>
+        <a href="#rekap-live">REKAP Live</a>
+        <a href="https://app.rekap.app/users/sign-in">Sign in</a>
+        <a class="pg-menu-close" href="#menu-closed" aria-label="Close menu"><svg class="pg-ic" aria-hidden="true"><use href="#i-x"/></svg></a>
+    </div>
 </header>
+
 <main>
     
     <section class="pg-rev" aria-labelledby="pg-rev-title">
@@ -69,23 +89,26 @@
 
         <div class="pg-rev-art" aria-hidden="true">
             
-            <div class="pg-post">
-                <img class="pg-post-shot" src="static/landing/hero-post.webp" alt="" width="524" height="934" fetchpriority="high" decoding="async">
-                <span class="pg-play"><svg class="pg-ic"><use href="#i-play"/></svg></span>
-                <div class="pg-post-info">
-                    <div class="pg-post-who"><span class="pg-avatar"><img src="static/img/brand/rekap-mark.svg" alt="" width="32" height="32"></span><span class="pg-post-handle">@kevin</span></div>
-                    <p class="pg-post-cap">High Five REKAP</p>
-                </div>
-                <span class="pg-progress"><i></i></span>
-            </div>
-            <span class="pg-coin"><svg class="pg-ic"><use href="#i-heart"/></svg></span>
-            <span class="pg-spark"><i></i><i></i><i></i></span>
-            <div class="pg-ticket"><svg class="pg-ic"><use href="#i-radio"/></svg><span>REKAP LIVE</span></div>
-            <div class="pg-chart"><i></i><i></i><i></i><i></i>
-                <svg class="pg-arrow" viewBox="0 0 200 120"><defs><linearGradient id="pg-arrow-g" x1="0" x2="1"><stop offset="0" stop-color="#F5B82E" stop-opacity="0"/><stop offset=".5" stop-color="#FF7300"/><stop offset="1" stop-color="#E4362E"/></linearGradient></defs>
-                    <path d="M4 112 C 70 104, 130 72, 178 20" fill="none" stroke="url(#pg-arrow-g)" stroke-width="12" stroke-linecap="round"/><path d="M150 14 L190 8 L184 48 Z" fill="#E4362E"/></svg>
-            </div>
+            <picture>
+                <source type="image/webp" srcset="static/landing/hero-art-400.webp 400w, static/landing/hero-art-800.webp 800w" sizes="(min-width: 1000px) 460px, min(calc(100vw - 40px), 400px)">
+                <img class="pg-rev-img" src="static/landing/hero-art-400.png" srcset="static/landing/hero-art-400.png 400w, static/landing/hero-art-800.png 800w" sizes="(min-width: 1000px) 460px, min(calc(100vw - 40px), 400px)" alt="" width="400" height="480" fetchpriority="high" decoding="async">
+            </picture>
         </div>
+    </section>
+
+    
+    <section class="pg-section pg-steps" id="how-it-works" aria-labelledby="pg-steps-title">
+        <p class="pg-eyebrow">How it works</p>
+        <h2 id="pg-steps-title" class="pg-h2">Post. Grow. Get paid.</h2>
+        <ol class="pg-grid pg-grid-3 pg-step-list">
+            
+            <li class="pg-tile pg-step"><img src="static/landing/sports/clapper-board.webp" alt="" width="64" height="64" loading="lazy" decoding="async"><h3><span class="pg-step-n">1</span>Post your takes</h3><p>Record a short sports video and share your take on the game.</p></li>
+            
+            <li class="pg-tile pg-step"><img src="static/landing/sports/speech-balloon.webp" alt="" width="64" height="64" loading="lazy" decoding="async"><h3><span class="pg-step-n">2</span>Build your community</h3><p>Fans follow you, comment on your takes and come back for more.</p></li>
+            
+            <li class="pg-tile pg-step"><img src="static/landing/sports/money-bag.webp" alt="" width="64" height="64" loading="lazy" decoding="async"><h3><span class="pg-step-n">3</span>Get paid</h3><p>Earn tips on your posts and sell tickets to your REKAP Live shows, paid out via Stripe.</p></li>
+            
+        </ol>
     </section>
 
     
@@ -167,7 +190,7 @@
         </ul>
     </section>
 
-    <section class="pg-section" aria-labelledby="pg-live-title">
+    <section class="pg-section" id="rekap-live" aria-labelledby="pg-live-title">
         <p class="pg-eyebrow"><span class="pg-live-dot" aria-hidden="true"></span>Live shows</p>
         <h2 id="pg-live-title" class="pg-h2">Your show. Your slot.</h2>
         <p class="pg-lede">REKAP Live puts you on air with your fans. Book a time, go live from the Live tab, and talk the game in real time.</p>
@@ -180,7 +203,6 @@
             <li class="pg-tile"><span class="pg-ic-wrap"><svg class="pg-ic" aria-hidden="true"><use href="#i-bell-ring"/></svg></span><h3>Fans get reminded</h3><p>Anyone who tapped Notify me gets an Inbox message when you’re live.</p></li>
             
         </ul>
-        <p class="pg-note">Booking and hosting a show is 18+.</p>
     </section>
 
     <section class="pg-section" aria-labelledby="pg-creators-title">
@@ -207,7 +229,7 @@
             
             <li class="pg-tile"><span class="pg-ic-wrap"><svg class="pg-ic" aria-hidden="true"><use href="#i-flag"/></svg></span><h3>Report and block</h3><p>Report any REKAP in two taps and block anyone. We review reports and act within 24 hours where possible.</p></li>
             
-            <li class="pg-tile"><span class="pg-ic-wrap"><svg class="pg-ic" aria-hidden="true"><use href="#i-shield-check"/></svg></span><h3>13+ only</h3><p>Everyone confirms their birthdate. Booking or hosting Live is 18+.</p></li>
+            <li class="pg-tile"><span class="pg-ic-wrap"><svg class="pg-ic" aria-hidden="true"><use href="#i-shield-check"/></svg></span><h3>13+ only</h3><p>Everyone confirms their birthdate when they sign up.</p></li>
             
             <li class="pg-tile"><span class="pg-ic-wrap"><svg class="pg-ic" aria-hidden="true"><use href="#i-trash-2"/></svg></span><h3>Delete anytime</h3><p>Delete your account from Settings. It takes effect right away.</p></li>
             
