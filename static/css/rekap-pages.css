@@ -84,7 +84,7 @@ img { max-width: 100%; }
 .pg-arrow { position: absolute; left: -46%; bottom: 46%; width: 130%; height: auto; overflow: visible; }
 
 /* 2. SPORTS */
-.pg-every { position: relative; margin: 24px auto 0; padding: 40px 20px 36px; text-align: center; overflow: hidden;
+.pg-every { position: relative; margin: 8px auto 0; padding: 40px 20px 36px; text-align: center; overflow: hidden;
     background: radial-gradient(70% 50% at 50% 50%, rgba(255,115,0,.24), transparent 72%); }
 .pg-emoji-row { list-style: none; margin: 0 auto; padding: 0; display: flex; justify-content: space-between; align-items: center; max-width: 520px; }
 .pg-emoji-row li { width: 18%; }
