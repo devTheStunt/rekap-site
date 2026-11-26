@@ -27,6 +27,14 @@ img { max-width: 100%; }
 .pg-top-center .pg-top-logo img { height: 34px; }
 .pg-badge { display: inline-flex; border-radius: 10px; flex: none; }
 .pg-badge img { display: block; height: auto; width: 162px; }
+/* Google Play PNG: 646x250 with 41px transparent padding; the visible 564x168 badge matches the 54px App Store badge. */
+.pg-cta-row { gap: 10px; flex-wrap: wrap; align-items: center; }
+.pg-cta-row .pg-badge img, .pg-final .pg-badge img { width: 150px; }                 /* phones: both badges on one row */
+.pg-cta-row .pg-badge-play img { width: 193px; margin: -12.5px; }                    /* visible 168x50 = App Store 150x50 */
+@media (min-width: 420px) {
+    .pg-cta-row .pg-badge img, .pg-final .pg-badge img { width: 162px; }
+    .pg-cta-row .pg-badge-play img { width: 208px; margin: -13.5px; }                /* visible 181x54 */
+}
 .pg-landing a:focus-visible, .pg-prose summary:focus-visible { outline: 3px solid #FF9A3C; outline-offset: 3px; }
 .pg-ic { width: 22px; height: 22px; flex: none; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
 .pg-ic-wrap { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; flex: none; border-radius: 14px;
@@ -137,7 +145,7 @@ img { max-width: 100%; }
 .pg-more { display: inline-flex; align-items: center; gap: 6px; text-decoration: none; padding: 10px 4px; }
 .pg-more .pg-ic { width: 18px; height: 18px; }
 .pg-faq .pg-prose { max-width: 760px; margin: 24px auto 0; text-align: left; }
-.pg-final { max-width: 1120px; margin: 56px auto 48px; padding: 40px 20px; text-align: center; border-radius: 28px;
+.pg-final { max-width: 1120px; margin: 56px auto 48px; padding: 40px 12px; text-align: center; border-radius: 28px;
     background: radial-gradient(80% 120% at 50% 0%, rgba(255,115,0,.28), transparent 70%), var(--card); border: 1px solid rgba(255,115,0,.25);
     width: calc(100% - 32px); scroll-margin-top: 24px; }
 .pg-final img[alt=""] { width: 64px; height: 64px; filter: drop-shadow(0 10px 30px rgba(255,115,0,.45)); }
